@@ -8,5 +8,9 @@
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "@types/ace": "0.0.42",
+    "ace-code-editor": "^1.2.3"
+  }
 }

@@ -1,0 +1,9 @@
+#editor{
+    position: center;
+    width: 100%;
+    height: calc(100vw/2);
+    font-size: calc(100vw / 45);
+    text-align: left;
+    /*background-color: #FFCCFF;*/
+    margin: 0 auto;
+}
