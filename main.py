@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 app = Flask(__name__, template_folder='front/dist')
 
 
@@ -10,6 +10,10 @@ def index():
 @app.route('/<path:d>')
 def dist(d):
 	return render_template(d)
+
+@app.route('/test')
+def test():
+	return jsonify({'test': 'hoge'})
 
 
 if __name__ == '__main__':
