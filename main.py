@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, send_file
 app = Flask(__name__, template_folder='front/dist')
 
 
@@ -11,9 +11,22 @@ def index():
 def dist(d):
 	return render_template(d)
 
+
+@app.route('/index.css')
+def css():
+	return send_file('front/dist/index.css')
+
 @app.route('/test')
 def test():
-	return jsonify({'test': 'hoge'})
+	return jsonify({'text': '''ボールAがある
+    色は赤
+    位置は100,100
+    半径は50
+  
+    ボールBがある
+    色は赤
+    位置は100,100
+    半径は50'''})
 
 
 if __name__ == '__main__':

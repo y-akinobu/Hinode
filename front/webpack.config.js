@@ -17,8 +17,11 @@ module.exports = {
   },
   // import 文で .ts ファイルを解決するため
   resolve: {
+    modules: [
+      "node_modules"
+    ],
     extensions: [
-      '.ts'
+      '.ts', '.js'
     ]
   }
 };
